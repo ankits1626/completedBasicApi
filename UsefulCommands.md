@@ -31,3 +31,17 @@
     python manage.py startapp profiles_api
 
 6) Enable app on project settings
+  add enteries to INSTALLED_APPS
+
+7) Test server
+  python manage.py runserver 0.0.0.0:8000
+
+8) Create django model
+  - create custom user model AbstractBaseUser, PermissionsMixin
+  - specify model manager
+9) Create UserProfileManager
+10) Configure application to use custom user model
+    AUTH_USER_MODEL = 'profiles_api.UserProfile'
+    - make migrations
+      python manage.py makemigrations profiles_api
+    - run migrations
