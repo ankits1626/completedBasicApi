@@ -88,5 +88,9 @@
     1) cat ~/.ssh/id_rsa.pub
 2) Login to AWS and go to EC2 create Key pair
 3) Create Ec2 instance
+4) create super user on aws 
+    
+        sudo env/bin/python manage.py createsuperuser
+
 
  
