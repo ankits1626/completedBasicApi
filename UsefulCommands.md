@@ -82,4 +82,11 @@
 3) Permissions
     1) Create permission
     2) Configure view set to use the permission
+    
+#Publish to AWS
+1) Create ssh
+    1) cat ~/.ssh/id_rsa.pub
+2) Login to AWS and go to EC2 create Key pair
+3) Create Ec2 instance
+
  
