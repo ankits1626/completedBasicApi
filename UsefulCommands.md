@@ -33,7 +33,7 @@
 6) Enable app on project settings
   add enteries to INSTALLED_APPS
 
-7) Test server
+7) Test server (RUN SERVER)
   python manage.py runserver 0.0.0.0:8000
 
 8) Create django model
@@ -45,3 +45,41 @@
     - make migrations
       python manage.py makemigrations profiles_api
     - run migrations
+      python manage.py migrate
+11) Create super user
+12) Add model to admin.py of app
+
+
+
+# APIView : CRUD methods
+    - full control over the logic
+    - calling external APIs
+
+1) Create An API views
+2) Configure URL
+3) Create serializer
+
+
+# ViewSet : Common Object Actions
+    1) List
+    2) Create
+    3) Retrieve
+    4) Update
+    5) Partial Update
+    6) Destroy
+ 
+ 1) create a viewset
+ 2) Create routers
+ 3) Add urls of router to application urls.py
+ 
+#Profile api
+1) Create a model serializer
+    1) Create meta class : 
+        1) Configure serializer to point to a specific model
+        2) Add list of fields managed via the serializer 
+2) Create a model viewset
+    1) provide query set to model viewset
+3) Permissions
+    1) Create permission
+    2) Configure view set to use the permission
+ 
