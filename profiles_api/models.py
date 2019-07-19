@@ -60,3 +60,16 @@ class ProfileFeedItem(models.Model):
     def __str__(self):
         """retrieve string representation of profile feed item"""
         return self.status_text
+
+class Post(models.Model):
+    user_profile = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete= models.CASCADE
+    )
+    post_content = models.CharField(max_length=500)
+    is_published = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        """retrieve string representation of profile feed item"""
+        return self.post_content

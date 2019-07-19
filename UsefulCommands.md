@@ -3,12 +3,15 @@
 1) Create a git ignore file
 2) Create local server using vagrant
   - create a vagrant file with required ubuntu
-      vagrant init ubuntu/bionic64
+        
+            vagrant init ubuntu/bionic64
   - configure vagrant file
   - start server
-      vagrant up
+      
+        vagrant up
   - connect to server
-      vagrant ssh
+      
+        vagrant ssh
   - disconnect
       exit
   - access project folder on virtual machine vagrant folder is synched with project folder
@@ -16,25 +19,31 @@
 
 3) Create a python virtual enviornment
   - go to vagrant folder on VM and type
-      python -m venv ~/env
+      
+        python -m venv ~/env
   - activate env
-      source ~/env/bin/activate
+      
+        source ~/env/bin/activate
 
 4) Install requirement for projects
   - create requirements.txt
-    pip install -r requirements.txt
+    
+        pip install -r requirements.txt
 
 5) Start a project
   - create project
-    django-admin startproject profiles_project .
+    
+        django-admin startproject profiles_project .
   - create an app
-    python manage.py startapp profiles_api
+    
+        python manage.py startapp profiles_api
 
 6) Enable app on project settings
   add enteries to INSTALLED_APPS
 
 7) Test server (RUN SERVER)
-  python manage.py runserver 0.0.0.0:8000
+  
+        python manage.py runserver 0.0.0.0:8000
 
 8) Create django model
   - create custom user model AbstractBaseUser, PermissionsMixin
@@ -43,9 +52,11 @@
 10) Configure application to use custom user model
     AUTH_USER_MODEL = 'profiles_api.UserProfile'
     - make migrations
-      python manage.py makemigrations profiles_api
+      
+            python manage.py makemigrations profiles_api
     - run migrations
-      python manage.py migrate
+      
+            python manage.py migrate
 11) Create super user
 12) Add model to admin.py of app
 
@@ -85,7 +96,8 @@
     
 #Publish to AWS
 1) Create ssh
-    1) cat ~/.ssh/id_rsa.pub
+      
+        cat ~/.ssh/id_rsa.pub
 2) Login to AWS and go to EC2 create Key pair
 3) Create Ec2 instance
 4) create super user on aws 
